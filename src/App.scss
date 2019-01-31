@@ -1,0 +1,38 @@
+
+$navbar-height: 56px;
+
+.navbar-brand {
+  color: white;
+}
+
+.editor {
+  display: flex;
+  flex-direction: row;
+}
+
+.src-code-container {
+  width: 50%;
+  height: calc(100vh - #{$navbar-height} );
+  resize: horizontal;
+  border-right: 1px black solid;
+  padding: 10px;
+}
+
+.src-code {
+  width: 100%;
+  height: calc(100% - 2em);
+  resize: none;
+
+  &-label {
+    width:100%;
+    height: 100%;
+  }
+}
+
+.output {
+ padding: 10px;
+}
+
+.hidden {
+  display: none;
+}
