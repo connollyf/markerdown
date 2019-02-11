@@ -8,9 +8,11 @@ class App extends Component {
         this.state = {
             output: true,
             source: true,
+            splash: true,
         };
         this.toggleOutput = this.toggleOutput.bind(this);
         this.toggleSource = this.toggleSource.bind(this);
+        this.toggleSplash = this.toggleSplash.bind(this);
     }
 
     toggleOutput() {
@@ -23,10 +25,16 @@ class App extends Component {
         this.setState({ source: !source });
     }
 
+    toggleSplash() {
+        const { splash } = this.state;
+        this.setState({ splash: false });
+    }
+
     render() {
         let sourceBtnClasses = 'btn btn-secondary btn-sm switcher-btn';
         let outputBtnClasses = 'btn btn-secondary btn-sm switcher-btn';
-        const { source, output } = this.state;
+        let splashClasses = 'splash';
+        const { source, output, splash } = this.state;
         if (!source) {
             sourceBtnClasses += ' off';
         }
@@ -34,10 +42,40 @@ class App extends Component {
             outputBtnClasses += ' off';
         }
 
+        if (!splash) {
+            splashClasses += 'off splashHidden';
+        }
+
         return (
             <div className="App">
-                <nav className="navbar navbar-expand-md">
-                    <span className="navbar-brand">Markerdown</span>
+                <div className={splashClasses}>
+                    <h1 className="splash-title">Markerdown</h1>
+                    <p>
+                        An online markdown editor built with{' '}
+                        <a href="https://reactjs.org/" target="_blank">
+                            React
+                        </a>{' '}
+                        and{' '}
+                        <a
+                            href="https://marked.js.org/#/README.md"
+                            target="_blank"
+                        >
+                            marked
+                        </a>
+                    </p>
+                    <button
+                        type="button"
+                        className="btn enterButton"
+                        onClick={this.toggleSplash}
+                    >
+                        {' '}
+                        <i className="fa fa-chevron-down" />{' '}
+                    </button>
+                </div>
+                <nav className="nav navbar navbar-expand-md">
+                    <span className="navbar-brand">
+                        Markerdown <i className="fa fa-pencil" />
+                    </span>
                     <button
                         className="navbar-toggler"
                         type="button"
