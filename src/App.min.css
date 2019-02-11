@@ -1,73 +1,50 @@
-$color1: rgba(250, 169, 22, 1);
-$color2: rgba(0, 159, 253, 1);
-$color3: rgba(42, 42, 114, 1);
-$color4: rgba(35, 37, 40, 1);
-$color5: rgba(234, 246, 255, 1);
-
-$navbar-height: 56px;
-
 .navbar {
-    background-color: $color4;
-    &-brand {
-        color: white;
-    }
+    background-color: #232528;
 }
-
+.navbar-brand {
+    color: white;
+}
 .editor {
     display: flex;
     flex-direction: row;
 }
-
-.editorContainer {
-}
-
 .src-code-container {
     flex: 1 100%;
-    height: calc(100vh - #{$navbar-height});
+    height: calc(100vh - 56px);
     resize: horizontal;
     border-right: 1px black solid;
     padding: 10px;
 }
-
 .src-code {
     width: 100%;
     height: calc(100% - 2em);
     resize: none;
-
-    &-label {
-    }
 }
-
 .output {
     flex: 1 100%;
     padding: 10px;
 }
-
 .hidden {
     display: none;
 }
-
 .switcher-btn {
-    background-color: $color2;
+    background-color: #009ffd;
     position: relative;
     right: 0;
-    &.off {
-        background-color: $color4;
-    }
 }
-
+.switcher-btn.off {
+    background-color: #232528;
+}
 .styling-btn {
-    background-color: $color2;
+    background-color: #009ffd;
     margin-top: -5px;
     margin-bottom: 5px;
 }
-
 .flex-container {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
-
 .dropdown-menu {
     min-width: 4rem;
 }
