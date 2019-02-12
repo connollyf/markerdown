@@ -16,9 +16,9 @@ class Output extends Component {
     render() {
         const { className, markdown } = this.props;
         return (
-            <div
-                className={className}
-                dangerouslySetInnerHTML={Output.parseMarkdown(markdown)}
+          <div
+            className={className}
+            dangerouslySetInnerHTML={Output.parseMarkdown(markdown)}
             />
         );
     }

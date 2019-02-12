@@ -2,8 +2,10 @@
     "name": "markerdown",
     "version": "0.1.0",
     "private": true,
+    "homepage": "https://connollyf.github.io/markerdown",
     "dependencies": {
         "eslint-config-standard-jsx": "^6.0.2",
+        "gh-pages": "^2.0.1",
         "marked": "^0.6.0",
         "marked-sanitizer-github": "^1.0.0",
         "react": "^16.8.1",
@@ -11,6 +13,8 @@
         "react-scripts": "2.1.4"
     },
     "scripts": {
+        "predeploy": "npm run build",
+        "deploy": "gh-pages -d build",
         "start": "react-scripts start",
         "build": "react-scripts build",
         "test": "react-scripts test",
@@ -26,7 +30,9 @@
         "not op_mini all"
     ],
     "devDependencies": {
-        "prettier": "1.16.4"
+        "eslint-config-prettier": "^4.0.0",
+        "eslint-plugin-prettier": "^3.0.1",
+        "prettier": "^1.16.4"
     },
     "husky": {
         "hooks": {

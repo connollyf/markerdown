@@ -26,7 +26,6 @@ class App extends Component {
     }
 
     toggleSplash() {
-        const { splash } = this.state;
         this.setState({ splash: false });
     }
 
@@ -47,70 +46,71 @@ class App extends Component {
         }
 
         return (
-            <div className="App">
-                <div className={splashClasses}>
-                    <h1 className="splash-title">Markerdown</h1>
-                    <p>
+          <div className='App'>
+            <div className={splashClasses}>
+              <h1 className='splash-title'>Markerdown</h1>
+              <p>
                         An online markdown editor built with{' '}
-                        <a href="https://reactjs.org/" target="_blank">
+                <a href='https://reactjs.org/' target='_blank' rel='noopener noreferrer'>
                             React
-                        </a>{' '}
+                </a>{' '}
                         and{' '}
-                        <a
-                            href="https://marked.js.org/#/README.md"
-                            target="_blank"
+                <a
+                  href='https://marked.js.org/#/README.md'
+                  target='_blank'
+                  rel='noopener noreferrer'
                         >
                             marked
-                        </a>
-                    </p>
-                    <button
-                        type="button"
-                        className="btn enterButton"
-                        onClick={this.toggleSplash}
+                </a>
+              </p>
+              <button
+                type='button'
+                className='btn enterButton'
+                onClick={this.toggleSplash}
                     >
-                        {' '}
-                        <i className="fa fa-chevron-down" />{' '}
-                    </button>
-                </div>
-                <nav className="nav navbar navbar-expand-md">
-                    <span className="navbar-brand">
-                        Markerdown <i className="fa fa-pencil" />
-                    </span>
-                    <button
-                        className="navbar-toggler"
-                        type="button"
-                        data-toggle="collapse"
-                        data-target="#navbarNav"
-                        aria-controls="navbarNav"
-                        aria-expanded="false"
-                        aria-label="Toggle navigation"
+                {' '}
+                <i className='fa fa-chevron-down' />{' '}
+              </button>
+            </div>
+            <nav className='nav navbar navbar-expand-md'>
+              <span className='navbar-brand'>
+                        Markerdown <i className='fa fa-pencil' />
+              </span>
+              <button
+                className='navbar-toggler'
+                type='button'
+                data-toggle='collapse'
+                data-target='#navbarNav'
+                aria-controls='navbarNav'
+                aria-expanded='false'
+                aria-label='Toggle navigation'
                     >
-                        <span className="navbar-toggler-icon" />
-                    </button>
-                    <div
-                        className="btn-group"
-                        role="group"
-                        aria-label="Toggle output and source code visibility"
+                <span className='navbar-toggler-icon' />
+              </button>
+              <div
+                className='btn-group'
+                role='group'
+                aria-label='Toggle output and source code visibility'
                     >
-                        <button
-                            type="button"
-                            className={sourceBtnClasses}
-                            onClick={this.toggleSource}
+                <button
+                  type='button'
+                  className={sourceBtnClasses}
+                  onClick={this.toggleSource}
                         >
                             Source
-                        </button>
-                        <button
-                            type="button"
-                            className={outputBtnClasses}
-                            onClick={this.toggleOutput}
+                </button>
+                <button
+                  type='button'
+                  className={outputBtnClasses}
+                  onClick={this.toggleOutput}
                         >
                             Compiled Markup
-                        </button>
-                    </div>
-                    <div className="navbar-collapse collapse" id="navbarNav" />
-                </nav>
-                <Editor source={source} output={output} />
-            </div>
+                </button>
+              </div>
+              <div className='navbar-collapse collapse' id='navbarNav' />
+            </nav>
+            <Editor source={source} output={output} />
+          </div>
         );
     }
 }

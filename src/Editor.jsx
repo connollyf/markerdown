@@ -23,13 +23,13 @@ For more info about markdown, try the toolbar above the source code or check out
 
 function StylingButton({ onClick, faiconStr }) {
     return (
-        <button
-            type="button"
-            className="btn btn-secondary styling-btn btn-sm"
-            onClick={onClick}
+      <button
+        type='button'
+        className='btn btn-secondary styling-btn btn-sm'
+        onClick={onClick}
         >
-            <i className={`fas fa-${faiconStr}`} />
-        </button>
+        <i className={`fas fa-${faiconStr}`} />
+      </button>
     );
 }
 StylingButton.propTypes = {
@@ -112,115 +112,115 @@ class Editor extends Component {
         const { source, output } = this.props;
         const { value } = this.state;
         return (
-            <div className="editor">
-                <div
-                    className={
+          <div className='editor'>
+            <div
+              className={
                         source
                             ? 'src-code-container'
                             : 'src-code-container hidden'
                     }
                 >
-                    <div className="flex-container">
-                        <span id="src-code-label">Source Code:</span>
-                        <div
-                            className="btn-group btn-group-sm"
-                            role="group"
-                            aria-label="Editor functionality"
+              <div className='flex-container'>
+                <span id='src-code-label'>Source Code:</span>
+                <div
+                  className='btn-group btn-group-sm'
+                  role='group'
+                  aria-label='Editor functionality'
                         >
-                            <StylingButton
-                                onClick={this.bold}
-                                faiconStr="bold"
+                  <StylingButton
+                    onClick={this.bold}
+                    faiconStr='bold'
                             />
-                            <StylingButton
-                                onClick={this.bold}
-                                faiconStr="italic"
+                  <StylingButton
+                    onClick={this.bold}
+                    faiconStr='italic'
                             />
-                            <StylingButton
-                                onClick={this.link}
-                                faiconStr="link"
+                  <StylingButton
+                    onClick={this.link}
+                    faiconStr='link'
                             />
-                            <StylingButton
-                                onClick={this.hr}
-                                faiconStr="ruler-horizontal"
+                  <StylingButton
+                    onClick={this.hr}
+                    faiconStr='ruler-horizontal'
                             />
-                            <StylingButton
-                                onClick={this.code}
-                                faiconStr="code"
+                  <StylingButton
+                    onClick={this.code}
+                    faiconStr='code'
                             />
-                            <div className="btn-group" role="group">
-                                <button
-                                    id="btnGroupDrop1"
-                                    type="button"
-                                    className="btn btn-secondary btn-sm dropdown-toggle styling-btn"
-                                    data-toggle="dropdown"
-                                    aria-haspopup="true"
-                                    aria-expanded="false"
+                  <div className='btn-group' role='group'>
+                    <button
+                      id='btnGroupDrop1'
+                      type='button'
+                      className='btn btn-secondary btn-sm dropdown-toggle styling-btn'
+                      data-toggle='dropdown'
+                      aria-haspopup='true'
+                      aria-expanded='false'
                                 >
                                     h
-                                </button>
-                                <div
-                                    className="dropdown-menu"
-                                    aria-labelledby="btnGroupDrop1"
+                    </button>
+                    <div
+                      className='dropdown-menu'
+                      aria-labelledby='btnGroupDrop1'
                                 >
-                                    <button
-                                        className="btn btn-secondary btn-sm dropdown-item"
-                                        type="button"
-                                        onClick={() => this.heading(1)}
+                      <button
+                        className='btn btn-secondary btn-sm dropdown-item'
+                        type='button'
+                        onClick={() => this.heading(1)}
                                     >
                                         h1
-                                    </button>
-                                    <button
-                                        className="btn btn-secondary btn-sm dropdown-item"
-                                        type="button"
-                                        onClick={() => this.heading(2)}
+                      </button>
+                      <button
+                        className='btn btn-secondary btn-sm dropdown-item'
+                        type='button'
+                        onClick={() => this.heading(2)}
                                     >
                                         h2
-                                    </button>
-                                    <button
-                                        className="btn btn-secondary btn-sm dropdown-item"
-                                        type="button"
-                                        onClick={() => this.heading(3)}
+                      </button>
+                      <button
+                        className='btn btn-secondary btn-sm dropdown-item'
+                        type='button'
+                        onClick={() => this.heading(3)}
                                     >
                                         h3
-                                    </button>
-                                    <button
-                                        className="btn btn-secondary btn-sm dropdown-item"
-                                        type="button"
-                                        onClick={() => this.heading(4)}
+                      </button>
+                      <button
+                        className='btn btn-secondary btn-sm dropdown-item'
+                        type='button'
+                        onClick={() => this.heading(4)}
                                     >
                                         h4
-                                    </button>
-                                    <button
-                                        className="btn btn-secondary btn-sm dropdown-item"
-                                        type="button"
-                                        onClick={() => this.heading(5)}
+                      </button>
+                      <button
+                        className='btn btn-secondary btn-sm dropdown-item'
+                        type='button'
+                        onClick={() => this.heading(5)}
                                     >
                                         h5
-                                    </button>
-                                    <button
-                                        className="btn btn-secondary btn-sm dropdown-item"
-                                        type="button"
-                                        onClick={() => this.heading(6)}
+                      </button>
+                      <button
+                        className='btn btn-secondary btn-sm dropdown-item'
+                        type='button'
+                        onClick={() => this.heading(6)}
                                     >
                                         h6
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
+                      </button>
                     </div>
-                    <textarea
-                        id="src"
-                        className="src-code"
-                        value={value}
-                        onChange={this.handleChange}
-                        ref={this.textRef}
-                    />
+                  </div>
                 </div>
-                <Output
-                    markdown={value}
-                    className={output ? 'output' : 'output hidden'}
-                />
+              </div>
+              <textarea
+                id='src'
+                className='src-code'
+                value={value}
+                onChange={this.handleChange}
+                ref={this.textRef}
+                    />
             </div>
+            <Output
+              markdown={value}
+              className={output ? 'output' : 'output hidden'}
+                />
+          </div>
         );
     }
 }
